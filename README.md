@@ -47,10 +47,10 @@ Implementasi kompleks yang mendemonstrasikan:
 Struktur Program:
 ```
 library/
-├── Book.java          # Class dasar untuk data buku
-├── BookNode.java      # Node untuk Linked List
-├── BookLinkedList.java # Implementasi Linked List
-└── LibraryApp.java    # Program utama
+├── Book.java            # Class dasar untuk data buku
+├── BookNode.java        # Node untuk Linked List
+├── BookLinkedList.java  # Implementasi Linked List
+└── LibraryApp.java      # Program utama
 ```
 
 ## 🎯 Konsep yang Dipelajari
@@ -103,44 +103,6 @@ library/
    - Tambahkan fitur baru
    - Implementasikan algoritma sorting
    - Buat variasi struktur data
-
-## 🔄 Kompleksitas Waktu
-
-### LicensePlateSearch
-- Pencarian: O(n)
-
-### PhysicsCalculator
-- Perhitungan: O(1)
-
-### SemesterGPACalculator
-- Input dan Konversi: O(n)
-- Perhitungan IP: O(n)
-
-### Library System
-- Tambah Buku (Add): O(1)
-- Cari Buku (Search): O(n)
-- Hapus Buku (Delete): O(n)
-- Tampilkan Semua (Display): O(n)
-
-## 🚀 Pengembangan Selanjutnya
-
-1. Implementasi struktur data baru:
-   - Stack
-   - Queue
-   - Binary Tree
-   - Hash Table
-
-2. Tambahan algoritma:
-   - Binary Search
-   - Bubble Sort
-   - Quick Sort
-   - Merge Sort
-
-3. Fitur aplikasi:
-   - Persistensi data ke file
-   - Interface grafis (GUI)
-   - Database integration
-   - RESTful API
 
 ## 📝 Cara Menjalankan Program
 
