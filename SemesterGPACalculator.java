@@ -1,17 +1,38 @@
 import java.util.Scanner;
 
-public class SIAKAD12 {
+/**
+ * Program Perhitungan IP Semester (GPA Calculator)
+ * Program ini menghitung Indeks Prestasi (IP) semester berdasarkan:
+ * 1. Nilai angka per mata kuliah (0-100)
+ * 2. Konversi ke nilai huruf (A, B+, B, C+, C, D, E)
+ * 3. Konversi ke bobot nilai (4.0, 3.5, 3.0, 2.5, 2.0, 1.0, 0)
+ * 4. Perhitungan IP dengan mempertimbangkan bobot SKS
+ */
+public class SemesterGPACalculator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String[] mk = { "Dasar Pemrograman", "Bahasa Inggris Dasar", "Praktikum Dasar Pemrograman", "Matematika Dasar",
-                "Pengantar Akutansi, Manajemen, dan Bisnis", "Critical Thinking and Problem Solving",
-                "Konsep Teknologi Informasi", "Agama", "Bahasa Indonesia"
+        
+        // Daftar mata kuliah yang diambil pada semester
+        String[] mk = { 
+            "Dasar Pemrograman", 
+            "Bahasa Inggris Dasar", 
+            "Praktikum Dasar Pemrograman", 
+            "Matematika Dasar",
+            "Pengantar Akutansi, Manajemen, dan Bisnis", 
+            "Critical Thinking and Problem Solving",
+            "Konsep Teknologi Informasi", 
+            "Agama", 
+            "Bahasa Indonesia"
         };
 
+        // Array untuk menyimpan nilai angka (0-100) untuk setiap mata kuliah
         double[] nilaimk = new double[mk.length];
+        // Array untuk menyimpan bobot nilai (0-4.0) untuk setiap mata kuliah
         double[] nilaiSetara = new double[mk.length];
+        // Array berisi SKS (satuan kredit semester) untuk setiap mata kuliah
         int[] sksmk = { 2, 2, 3, 2, 2, 2, 2, 2, 2 };
 
+        // Header program
         System.out.println();
         System.out.println("==============================");
         System.out.println("Program Menghitung IP Semester");
@@ -20,10 +41,20 @@ public class SIAKAD12 {
         double total = 0;
         int totalsks = 0;
 
+        // Input nilai dan konversi untuk setiap mata kuliah
         for (int i = 0; i < mk.length; i++) {
             System.out.print("Masukkan Nilai Angka Untuk MK " + mk[i] + ": ");
             nilaimk[i] = sc.nextDouble();
 
+            // Konversi nilai angka ke bobot nilai
+            // Sistem penilaian:
+            // 0-39   -> E  -> 0.0
+            // 40-50  -> D  -> 1.0
+            // 51-60  -> C  -> 2.0
+            // 61-65  -> C+ -> 2.5
+            // 66-73  -> B  -> 3.0
+            // 74-80  -> B+ -> 3.5
+            // 81-100 -> A  -> 4.0
             if (nilaimk[i] <= 39) {
                 nilaiSetara[i] = 0;
             } else if (nilaimk[i] > 39 && nilaimk[i] <= 50) {
@@ -40,10 +71,12 @@ public class SIAKAD12 {
                 nilaiSetara[i] = 4.0;
             }
 
+            // Menghitung total nilai (bobot * sks) dan total sks
             total += nilaiSetara[i] * sksmk[i];
             totalsks += sksmk[i];
         }
 
+        // Menampilkan hasil konversi nilai
         System.out.println();
         System.out.println("=====================");
         System.out.println("Hasil Konversi Nilai");
