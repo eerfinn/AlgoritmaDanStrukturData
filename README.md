@@ -1,6 +1,6 @@
 # Praktikum Algoritma dan Struktur Data
 
-## 🎯 Contoh Penggunaan Program
+## Skenario Program
 
 ### 1. Library System - Skenario Penggunaan
 
@@ -54,77 +54,7 @@
    - Menampilkan IP final
 ```
 
-## � Panduan Penggunaan Program
-
-### 1. Sistem Manajemen Perpustakaan (Library System)
-Program ini memungkinkan Anda mengelola koleksi buku dengan operasi dasar seperti menambah, mencari, dan menghapus buku.
-
-**Cara Menjalankan:**
-```bash
-javac library/*.java
-java library.LibraryApp
-```
-
-**Alur Program:**
-1. **Menambah Buku (Menu 1)**
-   ```
-   Pilih menu: 1
-   Masukkan ISBN: 9780123456789
-   Masukkan Judul: Algoritma dan Struktur Data
-   Masukkan Pengarang: John Doe
-   ```
-   - Program akan menyimpan buku dalam linked list
-   - Setiap buku disimpan sebagai node baru
-   - Data yang disimpan: ISBN, judul, pengarang, status ketersediaan
-
-2. **Mencari Buku (Menu 2)**
-   ```
-   Pilih menu: 2
-   Masukkan ISBN: 9780123456789
-   ```
-   - Program akan melakukan linear search
-   - Jika ditemukan: menampilkan detail buku
-   - Jika tidak: menampilkan pesan "Buku tidak ditemukan"
-
-3. **Menghapus Buku (Menu 3)**
-   ```
-   Pilih menu: 3
-   Masukkan ISBN: 9780123456789
-   ```
-   - Program mencari buku dengan ISBN yang dimasukkan
-   - Mengatur ulang pointer pada linked list
-   - Menghapus node buku dari memori
-
-4. **Menampilkan Semua Buku (Menu 4)**
-   ```
-   Pilih menu: 4
-   ```
-   - Menampilkan semua buku dalam format tabel
-   - Menunjukkan total buku yang tersimpan
-
-**Struktur Data yang Digunakan:**
-```
-Book (Object)
-    ├── ISBN
-    ├── Judul
-    ├── Pengarang
-    └── Status Ketersediaan
-
-BookNode (Linked List Node)
-    ├── Data Buku (Book Object)
-    └── Pointer ke Node Berikutnya
-
-BookLinkedList (Linked List)
-    └── Head Node (Pointer ke Buku Pertama)
-```
-
-**Tips Penggunaan:**
-1. Mulai dengan menambahkan beberapa buku (Menu 1)
-2. Gunakan Menu 4 untuk melihat daftar buku yang sudah ditambahkan
-3. Catat ISBN untuk memudahkan pencarian dan penghapusan
-4. Selalu perhatikan pesan konfirmasi setelah setiap operasi
-
-## �📚 Daftar Program
+## Daftar Program
 
 ### 1. Program Pencarian Plat Nomor (`LicensePlateSearch.java`)
 Program ini mendemonstrasikan:
@@ -175,7 +105,7 @@ library/
 └── LibraryApp.java      # Program utama
 ```
 
-## 🎯 Konsep yang Dipelajari
+## Konsep yang Dipelajari
 
 ### 1. Struktur Data
 - **Array**
@@ -207,20 +137,7 @@ library/
   - Scanner class
   - Formatted output
 
-## 💡 Tips Pembelajaran
-
-1. **Mulai dari Yang Sederhana**
-   - Pelajari `LicensePlateSearch.java` untuk memahami array dan pencarian
-   - Lanjut ke `PhysicsCalculator.java` untuk konsep menu dan perhitungan
-   - Pelajari `SemesterGPACalculator.java` untuk array yang lebih kompleks
-
-2. **Pelajari Linked List**
-   - Mulai dengan memahami `Book.java` dan struktur datanya
-   - Pelajari `BookNode.java` untuk konsep node dan pointer
-   - Pahami `BookLinkedList.java` untuk implementasi operasi linked list
-   - Terakhir, lihat `LibraryApp.java` untuk penggunaan dalam aplikasi
-
-## 📝 Cara Menjalankan Program
+## Cara Menjalankan Program
 
 1. Pastikan Java Development Kit (JDK) terinstall
 2. Compile program dengan command:
@@ -238,7 +155,7 @@ javac library/*.java
 java library.LibraryApp
 ```
 
-## 📚 Referensi
+## Referensi
 
 - [Java Documentation](https://docs.oracle.com/en/java/)
 - [Data Structures and Algorithms in Java](https://www.geeksforgeeks.org/data-structures/)
