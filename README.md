@@ -1,5 +1,3 @@
-# Praktikum Algoritma dan Struktur Data
-
 ## Skenario Program
 
 ### 1. Library System - Skenario Penggunaan
